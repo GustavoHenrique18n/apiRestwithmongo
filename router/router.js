@@ -10,7 +10,7 @@ router
     })
   })
   .get((req,res) => {
-    res.json({ status: 200 })
+    request.GetAll((data) => res.json(data))
   })
 router
   .route("/:id")

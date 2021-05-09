@@ -3,7 +3,10 @@ const Schema =  mongoose.Schema;
 
 const VeiculoSchema = new Schema({
   veiculo:String,
-  marca_id:{ type: Schema.Types.ObjectId , ref:'marcaVeiculo' },
+  marca_id: {
+      type: Schema.Types.ObjectId,
+      ref: 'Marca'
+    },
   ano: Number,
   descricao: String,
   vendido: Boolean,
