@@ -12,6 +12,7 @@ module.exports={
     marca.nome = req.nome
     try {
       await marca.save()
+      veiculo.marca_id.push(marca) 
       await veiculo.save()
       callback({message:'anuncio cadastrado com successo :)'})
     } catch (err) {

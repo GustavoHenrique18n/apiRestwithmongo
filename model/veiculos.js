@@ -1,12 +1,9 @@
 const mongoose = require("mongoose")
 const Schema =  mongoose.Schema;
-
+ 
 const VeiculoSchema = new Schema({
   veiculo:String,
-  marca_id: {
-      type: Schema.Types.ObjectId,
-      ref: 'Marca'
-    },
+  marca_id:[],
   ano: Number,
   descricao: String,
   vendido: Boolean,
